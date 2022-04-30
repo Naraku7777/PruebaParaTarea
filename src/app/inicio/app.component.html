@@ -1,23 +1,65 @@
+<body ng-app="myapp">
+	<div>
+		<div ng-controller="miControlador">
+			<form name="formularioRegistro" ng-submit="validar()" novalidate>
+				
+				<div ng-show="mostrarMensajeExito">
+					StarSale
+          <p>
+          <dd> Registro de articulos
+				</div>
 
+        <p>
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Custom Toolbar</span>
-  </mat-toolbar-row>
+				<input type="text" placeholder="Nombre" name="nombre" ng-model="persona.nombre" required/>
+				<span ng-show="nombreInvalid"><br/>Introduzca el nombre del articulo</span>
+				<br/>
+		
+				<input type="text" placeholder="Apellido" name="apellido" ng-model="persona.apellido" required/>
+				<span ng-show="apellidoInvalid"><br/>Introduzca su nombre completo</span>
+				<br/>
+				
+				<input type="email" placeholder="Email" name="email" ng-model="persona.email" required/>
+				<span ng-show="emailInvalid"><br/>Introduzca un email válido</span>
+				<br/>
+				
+				<select name="medio" ng-model="persona.medio" ng-options="obj.value as obj.label for obj in persona.canales" required>
+					<option value="">Facebook</option>
+          <option value="">Web</option>
+				</select>
+				<span ng-show="medioInvalid"><br/>Indica donde has oído hablar de nosostros</span>
+				<br/>
 
-  <mat-toolbar-row>
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-  </mat-toolbar-row>
+				<input type="submit" value="Registrar"/>
 
-  <mat-toolbar-row>
-    <span>Third Line</span>
-    <span class="example-spacer"></span>
-    
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+			</form>
+		</div>
+	</div>
+</body>
 
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+<style>
+  body, input, select {
+		font: normal 1em Helvetica;
+	}
 
-  </mat-toolbar-row>
-</mat-toolbar>
+	input:not([type='checkbox']), select {
+		width: 350px;
+	}
+
+	input, select {
+		padding: 5px;
+		margin-top: 12px;
+	}
+
+	input[name='email'].ng-dirty.ng-invalid-email {
+		color: red;
+	}
+	
+	input[name='email'].ng-dirty.ng-valid-email {
+		color: green;
+	}
+	
+	form span, .error {
+		color: red;
+	}
+</style>

@@ -1,4 +1,29 @@
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCdHx7O6Dnqp3LwzAKcTbegvDE9SAuxxr4",
+    authDomain: "proyecto-ii-fase.firebaseapp.com",
+    projectId: "proyecto-ii-fase",
+    storageBucket: "proyecto-ii-fase.appspot.com",
+    messagingSenderId: "710851672781",
+    appId: "1:710851672781:web:1464bc131e468d65d3c784",
+    measurementId: "G-22EQ6HJD7H"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 <body ng-app="myapp">
+  <img src="">
 	<div>
 		<div ng-controller="miControlador">
 			<form name="formularioRegistro" ng-submit="validar()" novalidate>

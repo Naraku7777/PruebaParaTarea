@@ -10,21 +10,20 @@
   </button>
 
   <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px" class="pl-3">
-    <span fxHide fxShow.xs>FX: XS</span>
-    <span fxHide fxShow.sm>FX: SM</span>
-    <span fxHide fxShow.md>FX: MD</span>
-    <span fxHide fxShow.lg>FX: LG</span>
-    <span fxHide fxShow.xl>FX: XL</span>
+    <span fxHide fxShow.xs>StarSale</span>
+    <span fxHide fxShow.sm>StarSale</span>
+    <span fxHide fxShow.md>StarSale</span>
+    <span fxHide fxShow.lg>StarSale</span>
+    <span fxHide fxShow.xl>StarSale</span>
   </div>
 
   <span fxFlex></span>
 
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/page1" routerLinkActive="router-link-active no-border">Page 1</button>
-    <button mat-button routerLink="/page2" routerLinkActive="router-link-active no-border">Page 2</button>
-    <button mat-button routerLink="/page3" routerLinkActive="router-link-active no-border">Page 3</button>
-    <button mat-button routerLink="/page4" routerLinkActive="router-link-active no-border">Page 4</button>
-    <button mat-button routerLink="/page5" routerLinkActive="router-link-active no-border">Page 5</button>
+    <button mat-button routerLink="/page1" routerLinkActive="router-link-active no-border">Login</button>
+    <button mat-button routerLink="/page2" routerLinkActive="router-link-active no-border">Artículos</button>
+    <button mat-button routerLink="/page3" routerLinkActive="router-link-active no-border">Ingresar nuevo articulo</button>
+    <button mat-button routerLink="/page4" routerLinkActive="router-link-active no-border">Acerca de</button>
   </div>
 </mat-toolbar>
 
@@ -32,20 +31,18 @@
   <mat-drawer #drawer>
     <div fxLayout="column">
       <button mat-button routerLink="/page1" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
-        <mat-icon class="mr-2">filter_1</mat-icon>Page 1</button>
+        <mat-icon class="mr-2">filter_1</mat-icon>Login</button>
       <mat-divider></mat-divider>
       <button mat-button routerLink="/page2" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
-        <mat-icon class="mr-2">filter_2</mat-icon>Page 2</button>
+        <mat-icon class="mr-2">filter_2</mat-icon>Artículos</button>
       <mat-divider></mat-divider>
       <button mat-button routerLink="/page3" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
-        <mat-icon class="mr-2">filter_3</mat-icon>Page 3</button>
+        <mat-icon class="mr-2">filter_3</mat-icon>Ingresar nuevo articulo</button>
       <mat-divider></mat-divider>
       <button mat-button routerLink="/page4" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
-        <mat-icon class="mr-2">filter_4</mat-icon>Page 4</button>
+        <mat-icon class="mr-2">filter_4</mat-icon>Acerca de</button>
       <mat-divider></mat-divider>
-      <button mat-button routerLink="/page5" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
-        <mat-icon class="mr-2">filter_5</mat-icon>Page 5</button>
-      <mat-divider></mat-divider>
+
     </div>
   </mat-drawer>
 
